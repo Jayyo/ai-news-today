@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 AI 뉴스 | 2025년 12월 6일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #888;
+        }
+
+        .date-badge {
+            display: inline-block;
+            background: rgba(123, 44, 191, 0.3);
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(123, 44, 191, 0.5);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .news-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .news-card-header {
+            padding: 25px 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .news-number {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #00d4ff, #7b2cbf);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: white;
+        }
+
+        .news-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+            flex: 1;
+        }
+
+        .news-source {
+            font-size: 0.85rem;
+            color: #00d4ff;
+            background: rgba(0, 212, 255, 0.1);
+            padding: 5px 12px;
+            border-radius: 15px;
+        }
+
+        .news-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .news-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .news-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .news-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .news-summary {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .news-summary h3 {
+            font-size: 1.1rem;
+            color: #00d4ff;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .news-summary h3::before {
+            content: "📋";
+        }
+
+        .news-summary p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        .key-points {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(0, 212, 255, 0.05);
+            border-radius: 12px;
+            border-left: 3px solid #00d4ff;
+        }
+
+        .key-points h4 {
+            font-size: 0.9rem;
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+
+        .key-points ul {
+            list-style: none;
+        }
+
+        .key-points li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .key-points li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #7b2cbf;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🤖 오늘의 AI 뉴스</h1>
+        <p>인공지능 분야의 최신 소식을 한눈에</p>
+        <div class="date-badge">📅 2025년 12월 6일</div>
+    </header>
+
+    <main>
+        <!-- News 1: SoftBank ASI -->
+        <article class="news-card">
+            <div class="news-card-header">
+                <div class="news-number">1</div>
+                <h2 class="news-title">손정의 "초인공지능 시대... 인류가 금붕어, AI가 인간 될 것"</h2>
+                <span class="news-source">조선일보</span>
+            </div>
+            <div class="news-content">
+                <div class="news-image">
+                    <img src="ai-news-1-softbank.png" alt="손정의 초인공지능 뉴스 캡쳐">
+                </div>
+                <div class="news-summary">
+                    <h3>기사 요약</h3>
+                    <p>
+                        소프트뱅크 그룹의 손정의 회장이 이재명 대통령을 예방하고, 초인공지능(ASI: Artificial Super Intelligence) 시대의 도래를 예고했다. 손 회장은 AI 시대에서 인류와 AI의 지능 격차를 "금붕어와 인간"에 비유하며, AI가 인간 수준의 지능을 넘어설 것이라고 전망했다.
+                    </p>
+                    <div class="key-points">
+                        <h4>핵심 포인트</h4>
+                        <ul>
+                            <li>손정의 회장, 이재명 대통령 예방</li>
+                            <li>ASI(초인공지능) 시대 도래 예측</li>
+                            <li>인간과 AI 지능 격차: "금붕어 vs 인간" 비유</li>
+                            <li>AI가 인간 수준 지능 초월 전망</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- News 2: Google Titans -->
+        <article class="news-card">
+            <div class="news-card-header">
+                <div class="news-number">2</div>
+                <h2 class="news-title">구글 리서치, AI의 '장기 기억' 능력 확보</h2>
+                <span class="news-source">인공지능신문</span>
+            </div>
+            <div class="news-content">
+                <div class="news-image">
+                    <img src="ai-news-2-google-titans.png" alt="구글 Titans AI 뉴스 캡쳐">
+                </div>
+                <div class="news-summary">
+                    <h3>기사 요약</h3>
+                    <p>
+                        구글 리서치가 AI의 장기 기억 능력을 획기적으로 향상시키는 두 가지 새로운 프레임워크인 'Titans'와 'MIRAS'를 공개했다. 이 기술들은 기존 트랜스포머 아키텍처의 한계를 극복하고, AI가 더 긴 맥락을 기억하고 처리할 수 있게 해준다.
+                    </p>
+                    <div class="key-points">
+                        <h4>핵심 포인트</h4>
+                        <ul>
+                            <li>'Titans' 아키텍처: 장기 기억 모듈 탑재</li>
+                            <li>'MIRAS' 프레임워크: 컨텍스트 확장 기술</li>
+                            <li>기존 트랜스포머의 컨텍스트 제한 극복</li>
+                            <li>더 긴 대화와 문서 처리 가능</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- News 3: MIT Robot -->
+        <article class="news-card">
+            <div class="news-card-header">
+                <div class="news-number">3</div>
+                <h2 class="news-title">MIT, AI 제어로 곤충급 민첩성 구현한 마이크로 로봇 개발</h2>
+                <span class="news-source">인공지능신문</span>
+            </div>
+            <div class="news-content">
+                <div class="news-image">
+                    <img src="ai-news-3-mit-robot.png" alt="MIT 마이크로 로봇 뉴스 캡쳐">
+                </div>
+                <div class="news-summary">
+                    <h3>기사 요약</h3>
+                    <p>
+                        MIT 연구진이 생체모방 AI 제어 시스템을 활용하여 곤충 수준의 민첩성을 갖춘 초고속 마이크로 로봇을 개발했다. 이 로봇은 2단계 AI 제어 시스템을 적용해 복잡한 지형에서도 빠르고 안정적으로 이동할 수 있다.
+                    </p>
+                    <div class="key-points">
+                        <h4>핵심 포인트</h4>
+                        <ul>
+                            <li>생체모방(바이오미메틱) 설계 적용</li>
+                            <li>2단계 AI 기반 제어 시스템</li>
+                            <li>곤충급 민첩성과 초고속 이동</li>
+                            <li>복잡한 지형 탐색 능력</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p><a href="https://github.com" target="_blank">GitHub</a></p>
+    </footer>
+</body>
+</html>
