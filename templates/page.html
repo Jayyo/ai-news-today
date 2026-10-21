@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$title</title>
+  <meta name="description" content="한국 AI 전문 매체의 하루치 기사에서 고른 뉴스와 짧은 요약. 모든 항목은 원문 기사로 연결됩니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="index.html">오늘의 AI 뉴스</a>
+    <p class="date">$date_label</p>
+    <p class="intro">$intro</p>$warnings
+  </header>
+
+  <main>
+$stories
+  </main>
+
+  <nav class="archive" aria-label="지난 호">
+    <h2>지난 호</h2>
+    <ul>
+$archive
+    </ul>
+  </nav>
+
+  <footer>
+    <p>$method</p>
+    <p>제목과 링크는 각 매체 RSS에서 가져왔습니다. 자세한 내용은 원문 기사를 확인하세요. 생성 시각 $generated KST</p>
+    <p><a href="$repo">소스 코드</a></p>
+  </footer>
+</body>
+</html>
