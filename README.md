@@ -2,6 +2,8 @@
 
 A small daily digest of Korean AI news, built from the RSS feeds of two Korean AI outlets, AI타임스 and 인공지능신문. A script collects one day of articles, a model picks the most important stories and summarizes each in one or two sentences, and the result is a static page where every item links to the original article.
 
+**Site: https://jayyo.github.io/ai-news-today/**
+
 ![Edition for 2026-10-21](docs/screenshot.png)
 
 The repo started in December 2025 as a single hand-made page with screenshots of three articles. It is now a reproducible pipeline, and the site shows whatever editions are committed in `editions/`.
@@ -39,9 +41,9 @@ pytest
 
 ## Publishing
 
-`public/` is a plain static site. `vercel.json` points Vercel at it, so `vercel --prod` from the repo root deploys the latest committed edition; any static host works too. The live site at https://ai-news-today.vercel.app is deployed by hand and does not update on push.
+`public/` is a plain static site. `.github/workflows/pages.yml` publishes it to GitHub Pages (https://jayyo.github.io/ai-news-today/) whenever it changes on `main`. `vercel.json` points Vercel at the same folder, so `vercel --prod` from the repo root works too; the older deployment at https://ai-news-today.vercel.app is deployed by hand and does not update on push.
 
-`.github/workflows/edition.yml` runs the tests, builds yesterday's edition (or a given date) and commits it when started from the Actions tab; it skips a date that already exists. The schedule is commented out. To get a new edition every morning, enable it and add an `OPENAI_API_KEY` repository secret; without the secret it builds a lede-only edition and calls no model. Deploying `public/` stays a separate step.
+`.github/workflows/edition.yml` runs the tests, builds yesterday's edition (or a given date) and commits it when started from the Actions tab; it skips a date that already exists. Its commit is pushed with `GITHUB_TOKEN`, which doesn't trigger push workflows, so `pages.yml` also runs when the edition workflow finishes and publishes the tip of `main`. The schedule is commented out. To get a new edition every morning, enable it and add an `OPENAI_API_KEY` repository secret; without the secret it builds a lede-only edition and calls no model.
 
 ## Limits
 
@@ -51,7 +53,7 @@ pytest
 
 ## 한국어 요약
 
-AI타임스와 인공지능신문 RSS에서 하루치 AI 기사를 모아 같은 사건을 묶고, 모델이 고른 기사를 RSS 제목과 설명문만 근거로 한두 문장으로 요약해 정적 페이지로 만듭니다. 모든 항목은 원문 기사로 연결되고, 요약에 쓴 인용 구절이나 숫자가 설명문에 없으면 요약 대신 기사 첫 문장을 싣습니다. 이 검사는 지어낸 인용과 숫자를 거르는 정도이고 의미까지 확인하지는 않습니다. `python -m digest build`로 전날 KST 기준 판을 만들고, 키 없이 돌릴 때는 `--no-model`을 붙입니다.
+AI타임스와 인공지능신문 RSS에서 하루치 AI 기사를 모아 같은 사건을 묶고, 모델이 고른 기사를 RSS 제목과 설명문만 근거로 한두 문장으로 요약해 정적 페이지로 만듭니다. 모든 항목은 원문 기사로 연결되고, 요약에 쓴 인용 구절이나 숫자가 설명문에 없으면 요약 대신 기사 첫 문장을 싣습니다. 이 검사는 지어낸 인용과 숫자를 거르는 정도이고 의미까지 확인하지는 않습니다. `python -m digest build`로 전날 KST 기준 판을 만들고, 키 없이 돌릴 때는 `--no-model`을 붙입니다. 사이트: https://jayyo.github.io/ai-news-today/
 
 ## License
 

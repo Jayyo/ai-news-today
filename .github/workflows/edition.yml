@@ -2,8 +2,8 @@ name: Build edition
 
 # Manual for now. To build and commit an edition every morning, uncomment the
 # schedule and add an OPENAI_API_KEY repository secret (without the secret the
-# build falls back to feed leads and no model is called). Deploying public/ is a
-# separate step.
+# build falls back to feed leads and no model is called). pages.yml publishes
+# public/ once this workflow has finished.
 on:
   workflow_dispatch:
     inputs:
