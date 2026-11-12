@@ -6,7 +6,7 @@ A small daily digest of Korean AI news, built from the RSS feeds of two Korean A
 
 ![Edition for 2026-10-21](docs/screenshot.png)
 
-The repo started in December 2025 as a single hand-made page with screenshots of three articles. It is now a reproducible pipeline, and the site shows whatever editions are committed in `editions/`.
+The repo started in December 2025 as a single page with screenshots of three articles. It is now a reproducible pipeline, and the site shows whatever editions are committed in `editions/`.
 
 ## How it works
 
